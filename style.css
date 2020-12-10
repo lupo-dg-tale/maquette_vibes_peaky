@@ -1,0 +1,680 @@
+* {
+    box-sizing: border-box;
+    font-family: "Peaky Blinders";
+}
+
+@font-face {
+    font-family: "Peaky Blinders";
+    src: url('leander/Leander.ttf');
+}
+
+body {
+    background-image: url(img/background.jpg);
+    background-attachment: fixed;
+    margin: 0;
+    /* filter: blur(8px);
+    -webkit-filter: blur(8px); */
+}
+
+.flex {
+    display: flex;
+}
+
+.wrapper {
+    width: 75%;
+    margin: auto
+}
+
+.wrapper-out {
+    width: 85%;
+    margin: auto;
+}
+
+.wrapper-in {
+    width: 60%;
+    margin: auto;
+}
+
+#drop {
+    background: white;
+    width: 32px;
+    position: fixed;
+}
+
+#drop i {
+    padding: 10px;
+}
+
+h2 {
+    font-size: 28px;
+    margin: 0;
+    padding-top: 24px;
+}
+
+.petit-trait {
+    width: 80px;
+    height: 4px;
+    background: black;
+    margin: auto;
+    margin-top: 0.5em;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+p {
+    font-size: 18px;
+}
+
+span {
+    color: darkred;
+    font-weight: bold;
+}
+
+button {
+    font-weight: bold;
+    border: black double 4px;
+    padding: 0.5em 1em;
+    background: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: black;
+    color: white;
+}
+
+/*****HEADER*****/
+
+header div {
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    width: 10%;
+    margin: 1em;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    text-shadow: black 1px 0 10px;
+    padding: 0 0.5em;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+    text-shadow: darkred 1px 0 10px;
+}
+
+/*****PREMIERE SECTION*****/
+
+#first {
+    /* background: url(img/background_first_section.png) center/100% no-repeat black; */
+    height: 55vh;
+    color: white;
+    text-shadow: black 3px 1px;
+    text-align: center;
+}
+
+.mySlides {
+    background: url(img/background_first_section.png) top center no-repeat black;
+    background-size: cover;
+    background-position-y: 50%;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.un {
+    background: url(img/slide2.jpg) top center no-repeat black;
+    background-size: cover;
+}
+
+.deux {
+    background: url(img/slide3.jpg) top center no-repeat black;
+    background-size: cover;
+}
+
+#first div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*****SECONDE SECTION*****/
+
+#choose {
+    background: white;
+    width: 100%;
+}
+
+#choose-us {
+    justify-content: space-around;
+    text-align: left;
+}
+
+#choose-us article {
+    width: 30%;
+    padding-bottom: 2em;
+}
+
+small {
+    font-size: 14px;
+}
+
+.icons {
+    flex-direction: column;
+}
+
+.icons i {
+    font-size: 30px;
+    color: darkred;
+}
+
+.icons :first-child {
+    padding: 0.2em 0.3em 0 0;
+}
+
+.icons :nth-child(2) {
+    padding: 0.7em 0.3em 0 0;
+}
+
+.icons :nth-child(3) {
+    padding: 0.7em 0.3em 0 0;
+}
+
+.dt {
+    padding-top: 1em;
+    font-size: 14px;
+}
+
+dd {
+    color: gray;
+    margin: 0;
+    font-size: 14px;
+}
+
+.accordion {
+    text-align: left;
+    transition: 0.4s;
+    margin-top: 2em;
+}
+
+.accordion:after {
+    content: '\002B';
+    float: left;
+    color: black;
+    font-weight: bold;
+    /*ne fonctionne pas*/
+    margin-right: 10px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.panel p {
+    margin-bottom: 0;
+}
+
+/*****TROISIEME SECTION*****/
+
+#gallery {
+    flex-wrap: wrap;
+}
+
+#gallery div {
+    width: 25%;
+}
+
+figure {
+    width: 100%;
+    margin: 0;
+    height: 35vh;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s all ease-in-out;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    transition: 0.8s all ease-in-out;
+}
+
+#gallery figcaption {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    color: white;
+    top: 0;
+    left: 0;
+    background-color: rgba(97, 7, 7, 0.9);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#gallery i {
+    font-size: 50px;
+}
+
+#gallery figure:hover figcaption {
+    opacity: 0.5;
+}
+
+#gallery figure:hover img {
+    transform: scale(1.5);
+}
+
+#sorter {
+    background: white;
+    width: 100% !important;
+    margin: 0;
+    padding: 3em 7em;
+    justify-content: space-between;
+    border-bottom: solid grey 0.1px;
+}
+
+/*****QUATRIEME SECTION*****/
+
+#testimonials {
+    background: white;
+    width: 100%;
+    text-align: center;
+    padding-top: 2em;
+}
+
+#testimonials i {
+    font-size: 70px;
+}
+
+#testimonials div {
+    align-items: center;
+    border-bottom: solid lightgray 0.1px;
+    margin-bottom: 2em;
+}
+
+#noborder {
+    border-bottom: none !important;
+}
+
+blockquote {
+    text-align: left;
+    font-style: italic;
+    color: gray;
+}
+
+blockquote footer p {
+    font-size: 14px;
+    font-style: normal;
+}
+
+blockquote strong {
+    color: black;
+}
+
+#right {
+    text-align: right;
+}
+
+#testimonials button {
+    margin-bottom: 3em;
+    color: white;
+    background: black;
+}
+
+#testimonials button:hover {
+    background: white;
+    color: black;
+}
+
+/*****CINQUIEME SECTION*****/
+
+#paralax {
+    background: url(img/background_new_horizon.jpg) fixed center no-repeat;
+    text-align: center;
+    height: 65vh;
+    color: white;
+}
+
+#paralax .petit-trait {
+    background: white;
+}
+
+#paralax p {
+    padding: 2em 0 4em 0;
+}
+
+/*****SIXIEME SECTION*****/
+
+#touch {
+    background: white;
+    width: 100%;
+    text-align: center;
+}
+
+form div {
+    flex-direction: column;
+    width: 50%;
+    margin-top: 2em;
+    margin-bottom: 5em;
+}
+
+#ancre {
+    margin-right: 1em;
+}
+
+label {
+    text-align: left;
+    margin-top: 1em;
+    font-size: 13px;
+}
+
+.required:after {
+    content: "*";
+}
+
+input {
+    padding: 0.8em;
+    background: lightgray;
+    border: none;
+}
+
+textarea {
+    background: lightgray;
+    border: none;
+    padding: 1px;
+}
+
+#submit {
+    margin-top: 1em;
+    width: 20%;
+    font-weight: bold;
+    border: black double 4px;
+    padding: 0.5em 1em;
+    background: black;
+    cursor: pointer;
+    color: white;
+}
+
+#submit:hover {
+    background: white;
+    color: black;
+}
+
+
+/*****SEPTIEME SECTION*****/
+
+#about {
+    background: black;
+    width: 100%;
+    color: white;
+    padding: 2em 0 1em 0;
+}
+
+#about div :first-child {
+    width: 40%;
+    padding-right: 2em;
+}
+
+#about div :nth-child(2) {
+    width: 40%;
+    padding-right: 2em;
+}
+
+#about h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+    width: 100% !important;
+}
+
+.mini-trait {
+    width: 35px !important;
+    height: 2px;
+    background: white;
+    margin: 0 0 0 3px;
+}
+
+#about p {
+    font-size: 15px;
+    color: gray;
+}
+
+strong {
+    color: white;
+    padding: 0 !important;
+}
+
+#adress {
+    width: 90% !important;
+    margin: 0;
+    font-style: italic;
+}
+
+#subscribe {
+    font-weight: bold;
+    border: black double 4px;
+    padding: 0.5em 1em;
+    background: white;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+#subscribe:hover {
+    background: black;
+    color: white;
+}
+
+#twitter i {
+    padding-top: 2em;
+}
+
+#page-up {
+    width: 100% !important;
+    text-align: right;
+}
+
+#arrow {
+    color: white;
+    font-size: 30px;
+    padding: 0 !important;
+}
+
+/*****FOOTER*****/
+
+#footer {
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer p {
+    color: white;
+}
+
+#footer a {
+    color: white;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+}
+
+/*****IPAD PORTRAIT*****/
+
+@media screen and (min-width:376px) and (max-width: 768px) {
+    header nav a {
+        display: none;
+    }
+    #first {
+        height: 23vh;
+    }
+    #first h2 {
+        font-size: 20px;
+    }
+    #first p {
+        font-size: 14px;
+    }
+    #choose-us {
+        flex-wrap: wrap;
+    }
+    #choose-us article {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: solid gray 0.1px;
+    }
+    #gallery div {
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+    #sorter {
+        padding: 1em;
+    }
+    #sorter button {
+        padding: 0.2em 0.4em;
+    }
+    #paralax {
+        height: 40vh;
+    }
+    #submit {
+        width: 40%;
+    }
+    #about {
+        padding-bottom: 0;
+    }
+    #about div :first-child {
+        width: 100%;
+    }
+    #about div :nth-child(2) {
+        width: 100%;
+    }
+    #about div {
+        flex-wrap: wrap;
+    }
+    #adress {
+        width: 95% !important;
+    }
+    #subscribe {
+        width: 40% !important;
+    }
+    #page-up {
+        text-align: center;
+    }
+    #footer {
+        flex-wrap: wrap;
+    }
+}
+
+/*****IPAD PAYSAGE*****/
+
+@media screen and (min-width: 813px) and (max-width: 1024px) {
+    header {
+        font-size: 14px;
+    }
+    .wrapper {
+        width: 85%;
+    }
+    #first {
+        height: 45vh;
+    }
+    .icons {
+        justify-content: space-around;
+    }
+    figure {
+        height: 25vh;
+    }
+    #sorter {
+        padding: 2em;
+    }
+    #submit {
+        width: 25%;
+    }
+    #subscribe {
+        width: 48% !important;
+    }
+}
+
+/*****IPHONE X PAYSAGE*****/
+
+@media screen and (min-width: 769px) and (max-width: 812px) {
+    .wrapper {
+        width: 90%;
+    }
+    header {
+        font-size: 12px;
+    }
+    #first {
+        height: 70vh;
+    }
+    #first h2 {
+        font-size: 22px;
+    }
+    #first p {
+        font-size: 16px;
+    }
+    #choose-us {
+        flex-wrap: wrap;
+    }
+    #choose-us article {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: solid gray 0.1px;
+    }
+    #gallery div {
+        width: 50%;
+    }
+    figure {
+        height: 65vh;
+    }
+    #sorter {
+        padding: 1.5em;
+    }
+    #paralax {
+        height: 95vh;
+    }
+    #submit {
+        width: 26%;
+    }
+    #subscribe {
+        width: 62% !important;
+    }
+}
+
+/*****IPHONE X PORTRAIT*****/
+
+@media screen and (max-width: 375px) {
+    .wrapper {
+        width: 85%;
+    }
+    #logo {
+        width: 15%;
+        margin: 8px 16px;
+    }
+    header nav {
+        display: none;
+    }
+    #first h2 {
+        font-size: 18px;
+    }
+}
